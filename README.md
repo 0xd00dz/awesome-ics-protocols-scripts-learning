@@ -29,3 +29,21 @@ The attacker script will write to the RogueTemp node. Check the client script to
 
 
 ![OPC Execution](/img/opc_execution.png)
+
+### Blue Team
+You can observe a bunch of interesting traffic you can monitor as an analyst:
+
+![OPC Wireshark](/img/opc_wireshark.png)
+
+#### Hello message
+Use this traffic to detect possible OPC Scanners
+
+#### Acknowledge message
+You could use it if you want to monitor if there is a response by the server. Maybe useful if you correlate Hello messages with Acknowledge messages.
+
+#### WriteRequest
+You want to know if there are uncontrolled and malicious devices on your OT network. Create alerts if you see writerequests from those uncontrolled devices on the net.
+![OPC Write Attacker](/img/opc_write_attacker.png)
+
+
+

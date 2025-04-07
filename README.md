@@ -50,5 +50,19 @@ You want to know if there are uncontrolled and malicious devices on your OT netw
 ### Harden Nodes
 Do you want to prevent the attacker from writing to the RogueTemp node? I challenge you to try it! Edit server.py and look for the line of code you need to modify.
 
+<details>
+  <summary>Spoiler warning</summary>
+  
+  ```python
+[...]
+# Enable writing permissions
+#control_node.set_writable()
+# Comment the following line:
+#rogue_node.set_writable()
+[...] 
+  ```
+  
+</details>
+
 Rerun server.py and attacker.py to see if your hardening was successful
 

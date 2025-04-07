@@ -47,5 +47,6 @@ You could use it if you want to monitor if there is a response by the server. Ma
 You want to know if there are uncontrolled and malicious devices on your OT network. Create alerts if you see writerequests from those uncontrolled devices on the net.
 ![OPC Write Attacker](/img/opc_write_attacker.png)
 
-
+### Harden Nodes
+Do you want to prevent the attacker from writing to the RogueTemp node? I challenge you to try it! Edit server.py and look for the line of code you need to modify.
 

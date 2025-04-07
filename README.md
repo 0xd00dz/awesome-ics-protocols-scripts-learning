@@ -22,13 +22,11 @@ The client will connect to the OPC server using credentials. It reads nodes and 
 Do not close this execution, as we will run the attacker script and observe the changes.
 
 
-####
+#### Attacker
 ```bash
 $ python attacker.py
 ```
 The attacker script will write to the RogueTemp node. Check the client script to see how RogueTemp has changed.
-
-
 
 ![OPC Execution](/img/opc_execution.png)
 

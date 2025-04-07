@@ -18,9 +18,9 @@ $ python server.py
 ```bash
 $ python client.py
 ```
-The client will connect to the OPC server using credentials. It reads nodes and tries to write to them. Note that it will show a write error — this is because the user does not have write permissions on the node.
+The client will connect to the OPC server using credentials. It reads nodes and tries to write to them. Note that it will show a write error — this is because the user does not have write permissions on the node. This is intentional, to show that you can harden your nodes by removing write permissions (if necessary).
 Do not close this execution, as we will run the attacker script and observe the changes.
-It's OK to receive a write error on the Control node. This is intentional, to show that you can harden your nodes by removing write permissions (if necessary).
+
 
 ####
 ```bash

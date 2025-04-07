@@ -25,8 +25,7 @@ Do not close this execution, as we will run the attacker script and observe the 
 ```bash
 $ python attacker.py
 ```
-The attacker script will write on the RogueTemp node. See Client script how RogueTemp has changed.
-
+The attacker script will write to the RogueTemp node. Check the client script to see how RogueTemp has changed.
 
 
 ![OPC Execution](/img/opc_execution.png)

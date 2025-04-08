@@ -45,9 +45,9 @@ def opc_menu():
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         print("OPC Menu:")
-        print("1. Server")
-        print("2. Client")
-        print("3. Attacker")
+        print("1. Run Server")
+        print("2. Run Client")
+        print("3. Attacks")
         print("0. Back")
 
         choice = input("Select an option: ")
@@ -57,14 +57,35 @@ def opc_menu():
         elif choice == "2":
             run_script("./opc-ua/client.py")
         elif choice == "3":
-            run_script("./opc-ua/attacker.py")
+            opc_attacks_menu()
         elif choice == "0":
             break
         else:
             print("Not a valid option.")
             input("Press Enter to continue...")
 
+def opc_attacks_menu():
+    while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("OPC Menu:")
+        print("1. Write on Rogue Sensor")
+        print("2. Scan the network for OPC servers")
+        print("3. Bruteforce credentials")
+        print("0. Back")
 
+        choice = input("Select an option: ")
+
+        if choice == "1":
+            run_script("./opc-ua/writer.py")
+        elif choice == "2":
+            run_script("./opc-ua/scanner.py")
+        elif choice == "3":
+            run_script("./opc-ua/bruteforce.py")
+        elif choice == "0":
+            break
+        else:
+            print("Not a valid option.")
+            input("Press Enter to continue...")
 
 def run_script(script_name):
     os.system('cls' if os.name == 'nt' else 'clear')

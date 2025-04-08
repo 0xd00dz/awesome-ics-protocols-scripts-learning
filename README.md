@@ -9,6 +9,17 @@ This is a personal project I worked on to get a deeper understanding of how OT p
 ```bash
 $ pip install opcua
 ```
+
+#### 1. Execute Main Menu
+```bash
+$ python main.py
+```
+Select option 1. OPC and launch in this order with different terminals:
+1. Server
+2. Client
+3. Attacker (after run Attacker, go back to Client terminal and observe how it changes)
+
+#### 2. Manual execution   
 #### Server
 ```bash
 $ python server.py

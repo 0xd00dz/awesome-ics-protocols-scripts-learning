@@ -48,6 +48,7 @@ def opc_menu():
         print("1. Run Server")
         print("2. Run Client")
         print("3. Attacks")
+        print("9. Help")
         print("0. Back")
 
         choice = input("Select an option: ")
@@ -58,6 +59,8 @@ def opc_menu():
             run_script("./opc-ua/client.py")
         elif choice == "3":
             opc_attacks_menu()
+        elif choice == "9":
+            help_menu()
         elif choice == "0":
             break
         else:
@@ -82,6 +85,24 @@ def opc_attacks_menu():
         elif choice == "3":
             run_script("./opc-ua/bruteforce.py")
         elif choice == "0":
+            break
+        else:
+            print("Not a valid option.")
+            input("Press Enter to continue...")
+
+def help_menu():
+    while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("OPC Help:")
+        print("1. First, run Server to start the OPC Server on port 4840")
+        print("2. Run the Client, this will read nodes values on the Server and it will try to modify Control node, which is in read mode and you'll notice a permission error")
+        print("3. Start the attacks and open Wireshark to know how OPC UA works")
+        print("4. Use this info to create your own NIDS rules detection")
+        
+
+        choice = input("Type 0 to go back: ")
+
+        if choice == "0":
             break
         else:
             print("Not a valid option.")
